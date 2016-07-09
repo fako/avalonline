@@ -18,6 +18,6 @@ from django.contrib import admin
 from avalonline.views.game import GameView
 
 urlpatterns = [
-    url(r'', GameView.as_view()),
+    url(r'(?P<game_id>\d+)?', GameView.as_view()),
     url(r'^admin/', include(admin.site.urls)),
 ]
