@@ -1,3 +1,6 @@
+import qrcode
+from django.core.urlresolvers import reverse
+
 from django.shortcuts import render_to_response, RequestContext, Http404
 from django.views.generic import TemplateView
 
@@ -19,7 +22,8 @@ class GameView(TemplateView):
     def post(self, request, *args, **kwargs):
 
         # TODO: create QR code and add to game
-        game = Game.object.create(qr_code="")
+        qrcode = qrcode.make(reverse("player"))
+        game = Game.object.create(qr_code=qrcode)
         player = Player.objects.create(game=game, nickname=request.POST.get("nickname"))
         game.game_master = player
         game.save()
