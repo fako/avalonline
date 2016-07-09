@@ -15,6 +15,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from avalonline.views import start_avalonline
+
 urlpatterns = [
+    url(r'', start_avalonline),
     url(r'^admin/', include(admin.site.urls)),
 ]
