@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 
 from avalonline.models import Game, Player
 
+
 class GameView(TemplateView):
     template_name = "start_avalonline.html"
 
