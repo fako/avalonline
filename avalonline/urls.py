@@ -15,9 +15,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from avalonline.views import start_avalonline
+from avalonline.views.game import GameView
 
 urlpatterns = [
-    url(r'', start_avalonline),
+    url(r'', GameView.as_view()),
     url(r'^admin/', include(admin.site.urls)),
 ]
