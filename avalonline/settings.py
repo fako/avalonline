@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'avalonline',
-        'USER': 'root',
-        'PASSWORD': ''
+        'USER': MYSQL_USER,
+        'PASSWORD': MYSQL_PASSWORD
     }
 }
 
