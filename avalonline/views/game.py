@@ -35,4 +35,5 @@ def start_game(request, game_id):
         game = Game.objects.get(id=game_id)
     except Game.DoesNotExist:
         raise Http404('Game {} does not exist'.format(game_id))
+    game.assign_player_roles()
     return render_to_response("start.html", {"game": game}, RequestContext(request))

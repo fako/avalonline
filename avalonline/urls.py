@@ -23,5 +23,7 @@ from avalonline.views.player import PlayerView
 urlpatterns = [
     url(r'^(?P<game_id>\d+)?$', GameView.as_view()),
     url(r'^(?P<game_id>\d+)/player/(?P<player_id>)?$', PlayerView.as_view(),name="player"),
+    url(r'^(?P<game_id>\d+)/start/$', PlayerView.as_view()),
+
     url(r'^admin/', include(admin.site.urls)),
 ]
