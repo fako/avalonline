@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Scan the QR-code</title>
+
+
+
+  <meta name="description" content="AvalonLine">
+  <meta name="author" content="Hack-A-Thon, Team Robert, Fako, Geff">
+  <script src="js/scripts.js"></script>
+
+  <body>
+    <form>
+      <h1>Enter your Nickname</h1>
+      Nickname:<br>
+    <input type="text" name="nickname"><br>
+    <button type="submit">Submit</button>
+    </form>
+    <form method="get" action="*nieuwe pagina*">
+    <button id="link_button">Start het Spel!</button>
+    </form>
