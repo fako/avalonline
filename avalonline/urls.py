@@ -15,9 +15,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+admin.autodiscover()
+
 from avalonline.views.game import GameView
+from avalonline.views.player import PlayerView
 
 urlpatterns = [
-    url(r'(?P<game_id>\d+)?', GameView.as_view()),
+    url(r'^(?P<game_id>\d+)?$', GameView.as_view()),
+    url(r'^(?P<game_id>\d+)/player/(?P<player_id>)?$', PlayerView.as_view()),
     url(r'^admin/', include(admin.site.urls)),
 ]

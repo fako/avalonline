@@ -8,7 +8,7 @@ class GameView(TemplateView):
 
     def get(self, request, game_id, *args, **kwargs):
         game = None
-        if game_id is not None:
+        if game_id:
             try:
                 game = Game.objects.get(id=game_id)
             except Game.DoesNotExist:

@@ -11,5 +11,5 @@ ROLE_CHOICES = [
 
 class Player(models.Model):
     nickname = models.CharField(max_length=50)
-    role = models.CharField(max_length=50, choices=ROLE_CHOICES)
+    role = models.CharField(max_length=50, choices=ROLE_CHOICES, null=True, blank=True)
     game = models.ForeignKey('Game', related_name="players")
